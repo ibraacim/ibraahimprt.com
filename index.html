@@ -77,7 +77,7 @@
         <textarea class="form-textarea" cols="30" rows="10" id="message" name="message" placeholder="Your message" required></textarea>
       </div>
     </div>
-            <input type="submit" value="Sand Message" class="btn-1">
+            <input type="submit" onclick="send()" value="Sand Message" class="btn-1">
   </form>
 
 </section>
@@ -130,6 +130,13 @@
             navbar.classList.remove('active'); // Close menu
         });
     });
+
+        function send(){
+            name.value = '';
+            email.value = '';
+            phone.value = '';
+            message.value = '';
+        }
     </script>
 </body>
 </html>
