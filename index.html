@@ -8,19 +8,20 @@
     <link rel="stylesheet" href="prt.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><span>Ibra</span>ahim</a>
+   <header class="header">
+    <a href="#" class="logo"><span>Ibra</span>ahim</a>
 
-        <nav class="navbar">
-            <a href="#" class="active">Portifolio</a>
-            <a href="#">Services</a>
-            <a href="#">Experience</a>
-            <a href="#">Projects</a>
-            <a href="#">Education</a>
-        </nav>
+    <nav class="navbar">
+        <a href="#" class="active">Portifolio</a>
+        <a href="#">Services</a>
+        <a href="#">Experience</a>
+        <a href="#">Projects</a>
+        <a href="#">Education</a>
+    </nav>
 
-        <a href="#contact" class="contact">Contact Me</a>
-    </header>
+    <a href="#contact" class="contact">Contact Me</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+</header>
 
     <section class="home">
         <div class="home-content">
@@ -112,7 +113,23 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
 
+    // Toggle navbar menu
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+
+    // Set active link and close menu on link click (mobile)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            navbar.classList.remove('active'); // Close menu
+        });
+    });
     </script>
 </body>
 </html>
