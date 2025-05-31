@@ -130,6 +130,84 @@
             navbar.classList.remove('active'); // Close menu
         });
     });
+
+        // validation
+        document.getElementById("myform").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    console.log("form submitted without refresh");
+    
+  
+    const formData = new FormData(this);
+    console.log(formData.get("name"));
+  });
+
+function validateForm() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (name === '') {
+    alert('Please enter your name.');
+    document.getElementById('name').style.border = "1px solid red";
+    document.getElementById('name').placeholder = "please enter Full name";
+    return false;
+  }
+  else{
+    document.getElementById('name').style.border = "2px solid rgba(95, 252, 129, 0.664)";
+    document.getElementById('name').placeholder = "";
+  }
+
+  if (email === '' || !/^\S+@\S+\.\S+$/.test(email)) {
+    alert('Please enter a valid email address.');
+    document.getElementById('email').style.border = "1px solid red";
+    document.getElementById('email').placeholder = "please enter email";
+    return false;
+  }
+    else{
+    document.getElementById('email').style.border = "2px solid rgba(95, 252, 129, 0.664)";
+    document.getElementById('email').placeholder = "";
+  }
+
+  if (phone === '' || !/^\d{10,15}$/.test(phone)) {
+    alert('Please enter a valid phone number (10–15 digits).');
+    document.getElementById('phone').style.border = "1px solid red";
+    document.getElementById('phone').placeholder = "please enter phone number";
+    return false;
+  }
+      else{
+    document.getElementById('phone').style.border = "2px solid rgba(95, 252, 129, 0.664)";
+    document.getElementById('phone').placeholder = "";
+  }
+
+  if (subject === '') {
+    alert('Please enter a subject.');
+    document.getElementById('subject').style.border = "1px solid red";
+    document.getElementById('subject').placeholder = "please enter subject";
+    return false;
+  }
+        else{
+    document.getElementById('subject').style.border = "2px solid rgba(95, 252, 129, 0.664)";
+    document.getElementById('subject').placeholder = "";
+  }
+
+  if (message === '') {
+    alert('Please enter your message.');
+    document.getElementById('message').style.border = "1px solid red";
+    document.getElementById('message').placeholder = "please enter message";
+    return false;
+  }
+        else{
+    document.getElementById('message').style.border = "2px solid rgba(95, 252, 129, 0.664)";
+    document.getElementById('message').placeholder = "";
+  }
+
+  return true; // Submit the form
+  
+}
+
+
     </script>
 </body>
 </html>
