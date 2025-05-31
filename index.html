@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibraahim.com</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prt.css">
 </head>
 <body>
    <header class="header">
@@ -22,6 +22,7 @@
     <a href="#contact" class="contact">Contact Me</a>
     <i class='bx bx-menu' id="menu-icon"></i>
 </header>
+
 
     <section class="home">
         <div class="home-content">
@@ -55,32 +56,34 @@
 
 <section class="contact-form" id="contact">
   <div class="contact-intro">
- <h2 class="contact-me">Contact<span>Me</span></h2>
+    <h2 class="contact-me">Contact<span>Me</span></h2>
   </div>
 
-  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
+  <form id="myform" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validateForm()">
     <input type="hidden" name="access_key" value="7e0edc2b-e105-459c-91d2-449589af2a48" />
     <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
     <input type="hidden" name="from_name" value="My Website" />
 
     <div class="form-group-container">
       <div class="input-box">
-        <input id="name" name="name" class="form-input" placeholder="FULL Name" type="text"/>
-        <input id="email" name="email" class="form-input" placeholder="Email" type="email"/>
+        <input id="name" name="name" class="form-input" placeholder="Full Name" type="text" />
+        <input id="email" name="email" class="form-input" placeholder="Email" type="email" />
       </div>
+
       <div class="input-box">
-        <input id="phone" name="phone" class="form-input" placeholder="phone number" type="text"/>
-        <input type="text" id="message" name="message" placeholder="Subject">
+        <input id="phone" name="phone" class="form-input" placeholder="Phone Number" type="text" />
+        <input id="subject" name="subject" class="form-input" placeholder="Subject" type="text" />
       </div>
+
       <div class="form-group">
-        <textarea class="form-textarea" cols="30" rows="10" id="message" name="message" placeholder="Your message"></textarea>
+        <textarea class="form-textarea" cols="30" rows="10" id="message" name="message" placeholder="Your Message"></textarea>
       </div>
     </div>
-            <input type="submit" onclick="send()" value="Sand Message" class="btn-1">
-  </form>
 
+    <input type="submit" value="Send Message" class="btn-1">
+  </form>
 </section>
+
 
     <footer class="footer">
         <div class="social">
@@ -112,7 +115,7 @@
     </footer>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script>
+<script>
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.navbar a');
@@ -131,8 +134,8 @@
         });
     });
 
-        // validation
-        document.getElementById("myform").addEventListener("submit", function(event) {
+
+document.getElementById("myform").addEventListener("submit", function(event) {
     event.preventDefault(); 
     console.log("form submitted without refresh");
     
@@ -208,6 +211,7 @@ function validateForm() {
 }
 
 
-    </script>
+</script>
+
 </body>
-</html>
+</html>  
