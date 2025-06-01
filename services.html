@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background-color: rgb(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .goback{
+    font-size: 24px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    display: flex;
+    position: relative;
+    left: -200px;
+    top: 3px;
+}
+.header .goback p{
+    position: relative;
+    top: -7px;
+}
+
+    .service-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+      top: 300px;
+    }
+
+    .service-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .service-header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #333;
+    }
+
+    .service-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .service-card {
+      background: #007BFF;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .service-card:hover {
+      background: #0056b3;
+    }
+
+    .service-card h2 {
+      margin-top: 0;
+    }
+
+    .service-card p {
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+  </style>
+</head>
+<body>
+
+            <div class="header">
+            <a href="prt.html" class="goback"><i class='bx  bx-caret-left'  ></i><p>BACK</p></a>
+        </div>
+    
+  <div class="service-container">
+    <div class="service-header">
+      <h1>Our Web Services</h1>
+    </div>
+    <div class="service-list">
+      <div class="service-card">
+        <h2>API Development</h2>
+        <p>Custom RESTful and GraphQL APIs designed for your business needs.</p>
+      </div>
+      <div class="service-card">
+        <h2>Web Hosting</h2>
+        <p>Reliable, secure, and scalable hosting services for your websites and applications.</p>
+      </div>
+      <div class="service-card">
+        <h2>Maintenance & Support</h2>
+        <p>Ongoing website updates, security patches, and 24/7 support.</p>
+      </div>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
